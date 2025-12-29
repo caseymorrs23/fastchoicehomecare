@@ -1346,3 +1346,19 @@ footer{
 @media (max-width: 520px){
   .qw-services{ grid-template-columns: 1fr; }
 }
+
+
+
+/* --- Nav fixes: prevent mobile menu showing on desktop --- */
+.nav-mobile{ display:none; }
+.nav-mobile[hidden]{ display:none !important; }
+body.menu-open .nav-mobile{ display:flex; }
+@media (max-width: 820px){
+  body.menu-open .nav-mobile{ display:flex; }
+}
+
+/* Bigger logo in header */
+.logo-img{ height: 60px; }
+@media (max-width: 820px){
+  .logo-img{ height: 54px; }
+}
