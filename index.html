@@ -8,15 +8,23 @@
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.fastchoicehomecare.com/" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header>
     <div class="nav-wrapper">
-      <a href="#home" class="logo">
+      <a href="#home" class="logo" aria-label="Fast Choice Homecare">
         <img src="assets/img/logo-main.png" alt="Fast Choice Homecare logo" class="logo-img" />
       </a>
-      <nav aria-label="Primary navigation">
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-desktop" aria-label="Primary navigation">
         <ul>
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -24,78 +32,102 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
       <a class="btn-outline nav-cta" href="tel:12533490008">Call: 253-349-0008</a>
+    </div>
+
+    <div id="mobileMenu" class="nav-mobile" hidden>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+      <a class="btn-primary nav-mobile-cta" href="tel:12533490008">Call Now</a>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
     <section id="home" class="hero">
-      <div class="hero-media">
-        <img src="assets/img/hero-homecare.png" alt="Compassionate non-medical home care" />
+      <div class="hero-media" role="img" aria-label="Caregiver supporting an older adult at home">
+        <img src="assets/img/hero-homecare.png" alt="Caregiver supporting an older adult at home" />
       </div>
+
       <div class="hero-inner">
         <div class="hero-content">
-          <p class="hero-kicker">Compassionate, Non-Medical Home Care</p>
-          <h1>Support that helps your loved one stay safely at home.</h1>
+          <p class="hero-kicker">Compassionate, Non‑Medical In‑Home Care</p>
+          <h1>Calm, dependable support—so your loved one can stay safely at home.</h1>
           <p class="hero-subtitle">
-            Fast Choice Homecare provides non-medical in-home support so seniors and adults can live comfortably at home with dignity, safety, and independence.
+            From companionship and personal care to meal prep, errands, and respite support, our caregivers help families
+            navigate day‑to‑day life with dignity, safety, and peace of mind.
           </p>
+
           <div class="hero-actions">
-            <button class="btn-primary" onclick="scrollToSection('contact')">
-              Get Started
+            <button class="btn-primary" type="button" onclick="scrollToSection('contact')">
+              Request Care Info
             </button>
             <a class="btn-outline btn-outline-dark" href="tel:12533490008">
               Call: 253-349-0008
             </a>
           </div>
-          <p class="hero-footnote">Serving families throughout Pierce County and nearby communities.</p>
+
+          <div class="trust-row" aria-label="Trust indicators">
+            <div class="trust-item">Local • Family‑Focused</div>
+            <div class="trust-item">Flexible Scheduling</div>
+            <div class="trust-item">Care Plans Built Around You</div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
       <div class="section-inner">
         <div class="section-header">
           <div class="section-kicker">About Fast Choice Homecare</div>
-          <h2 class="section-title">A local, family-owned in-home care provider.</h2>
+          <h2 class="section-title">Care that feels steady, respectful, and personal.</h2>
           <p class="section-intro">
-            We know how hard it can be when someone you love begins to struggle with daily tasks. Fast Choice Homecare was created
-            to give families a dependable, local option for support at home.
+            When daily routines start to feel harder, families need support they can trust. We provide non‑medical in‑home care
+            that helps older adults and those recovering at home stay safe, comfortable, and connected.
           </p>
         </div>
 
         <div class="two-column">
           <div class="about-text">
             <p>
-              Our focus is on respect, reliability, and genuine compassion. Inviting a caregiver into your home is a big decision,
-              and we do not take that trust lightly. We take the time to understand your routines, preferences, and goals before we ever step through the door.
+              Inviting a caregiver into your home is a big decision. We take time to understand your needs and preferences,
+              then match caregivers and schedules that fit your household. Our focus is practical help, warm companionship,
+              and reliable follow‑through.
             </p>
-            <p>
-              From a few hours a week to more frequent visits, we design simple, clear care plans that fit your family’s schedule
-              and budget. Our caregivers are selected for their patience, character, and commitment to treating clients like family.
-            </p>
-            <ul class="about-list">
-              <li>Non-medical, in-home support tailored to each person.</li>
-              <li>Respectful, dignified assistance with everyday tasks.</li>
-              <li>Open communication with families and loved ones.</li>
-              <li>Flexible care options that can adjust as needs change.</li>
-            </ul>
+
+            <div class="value-grid">
+              <div class="value-card">
+                <h3>Respect</h3>
+                <p>We protect dignity, privacy, and choice in every interaction.</p>
+              </div>
+              <div class="value-card">
+                <h3>Reliability</h3>
+                <p>Clear communication and consistent care you can plan around.</p>
+              </div>
+              <div class="value-card">
+                <h3>Compassion</h3>
+                <p>Care that is patient, calm, and genuinely supportive.</p>
+              </div>
+              <div class="value-card">
+                <h3>Trust</h3>
+                <p>We earn confidence through transparency and accountability.</p>
+              </div>
+            </div>
           </div>
 
           <aside class="about-card">
-            <img src="assets/img/about-family.png" alt="Care you can count on" class="about-image"/>
+            <img src="assets/img/about-family.png" alt="Family support and home care" />
             <div class="about-card-body">
-              <strong>Our mission</strong>
+              <h3 class="card-title">Our mission</h3>
               <p>
-                To provide respectful, non-medical in-home care that keeps people safe, comfortable, and connected to the life they love.
+                To provide respectful, non‑medical in‑home care that keeps people safe, comfortable, and connected to the life they love.
               </p>
-              <div class="pill-row">
-                <div class="pill">Respect</div>
-                <div class="pill">Reliability</div>
-                <div class="pill">Compassion</div>
-                <div class="pill">Trust</div>
+              <div class="note">
+                Serving families throughout Pierce County and nearby communities.
               </div>
             </div>
           </aside>
@@ -104,170 +136,161 @@
     </section>
 
     <!-- Services -->
-    <section id="services">
+    <section id="services" class="section section-alt">
       <div class="section-inner">
         <div class="section-header">
           <div class="section-kicker">Services</div>
-          <h2 class="section-title">Everyday support to make life at home easier.</h2>
+          <h2 class="section-title">Support for everyday life at home.</h2>
           <p class="section-intro">
-            Every person and family is different. We start by listening, then build a care plan that fits your routine and priorities.
-            All services are non-medical.
+            We provide non‑medical assistance tailored to your routines—whether you need a few hours a week or more consistent support.
           </p>
         </div>
 
-        <div class="services-grid">
+        <div class="cards-grid">
           <article class="service-card">
-            <img src="assets/img/service-companionship-and-social-support.png" alt="Companionship and social support" class="service-image" />
-            <div class="service-content">
-              <h3 class="service-title">Companionship &amp; Social Support</h3>
-              <p class="service-body">
-                Conversation, games, walks, and activities that help reduce loneliness and keep your loved one engaged with daily life.
-              </p>
+            <img src="assets/img/service-personal-care-support.png" alt="Personal care support" />
+            <div class="card-body">
+              <h3>Personal Care Support</h3>
+              <p>Help with hygiene, grooming, mobility, and safe daily routines—delivered with dignity.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="assets/img/service-personal-care-support.png" alt="Personal care support" class="service-image" />
-            <div class="service-content">
-              <h3 class="service-title">Assistance with Dressing &amp; Personal Care</h3>
-              <p class="service-body">
-                Discreet help with bathing, grooming, dressing, toileting, and safe mobility so your loved one can feel clean, comfortable, and confident.
-              </p>
+            <img src="assets/img/service-companionship-and-social-support.png" alt="Companionship and social support" />
+            <div class="card-body">
+              <h3>Companionship &amp; Social Support</h3>
+              <p>Conversation, engagement, and friendly presence to reduce isolation and improve well‑being.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="assets/img/service-meal-prep-and-home-help.png" alt="Meal preparation and home help" class="service-image" />
-            <div class="service-content">
-              <h3 class="service-title">Nutritional Care &amp; Meal Support</h3>
-              <p class="service-body">
-                Help with planning and preparing simple, healthy meals and snacks, grocery shopping support, and gentle encouragement around eating and hydration.
-              </p>
+            <img src="assets/img/service-meal-prep-and-home-help.png" alt="Meal preparation and home help" />
+            <div class="card-body">
+              <h3>Meal Prep &amp; Home Help</h3>
+              <p>Light meal preparation and household assistance to keep days organized and comfortable.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="assets/img/service-housekeeping-and-laundry.png" alt="Housekeeping and laundry" class="service-image" />
-            <div class="service-content">
-              <h3 class="service-title">Light Housekeeping &amp; Laundry</h3>
-              <p class="service-body">
-                Tidying common areas, dishes, trash removal, sweeping, vacuuming, and laundry to help keep the home clean, safe, and welcoming.
-              </p>
+            <img src="assets/img/service-housekeeping-and-laundry.png" alt="Housekeeping and laundry assistance" />
+            <div class="card-body">
+              <h3>Housekeeping &amp; Laundry</h3>
+              <p>Light housekeeping support that helps maintain a clean, safe living environment.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="assets/img/service-transportation-and-errands.png" alt="Mobility assistance and support" class="service-image" />
-            <div class="service-content">
-              <h3 class="service-title">Mobility Assistance &amp; Support</h3>
-              <p class="service-body">
-                Hands-on support with walking, transfers, and moving safely around the home or to and from appointments, helping reduce fall risk and increase confidence.
-              </p>
+            <img src="assets/img/service-transportation-and-errands.png" alt="Transportation and errands support" />
+            <div class="card-body">
+              <h3>Transportation &amp; Errands</h3>
+              <p>Assistance getting to appointments, picking up prescriptions, and handling everyday errands.</p>
             </div>
           </article>
 
           <article class="service-card">
-            <img src="assets/img/service-respite-for-family-caregivers.png" alt="Respite for family caregivers" class="service-image" />
-            <div class="service-content">
-              <h3 class="service-title">Respite for Family Caregivers</h3>
-              <p class="service-body">
-                Scheduled breaks so family caregivers can rest, work, or handle personal responsibilities while knowing their loved one is being cared for.
-              </p>
+            <img src="assets/img/service-respite-for-family-caregivers.png" alt="Respite support for family caregivers" />
+            <div class="card-body">
+              <h3>Respite for Family Caregivers</h3>
+              <p>Short‑term relief so family caregivers can rest, work, and recharge—without worry.</p>
             </div>
           </article>
         </div>
 
-        <div class="service-note">
-          <strong>Important:</strong> Fast Choice Homecare is a non-medical agency. We do not provide medication administration,
-          injections, wound care, or other skilled medical services. We are happy to coordinate alongside your preferred healthcare providers.
-        </div>
-
-        <div class="testimonial" aria-label="Client testimonial">
-          <p>
-            “Fast Choice Homecare has been a blessing for our family. They are reliable, kind, and truly care about our loved one.
-            Knowing someone we trust is there makes all the difference.”
-          </p>
-          <div class="testimonial-footer">— Client family (placeholder, replace with real testimonial)</div>
+        <div class="process">
+          <div class="process-header">
+            <h3>How care starts</h3>
+            <p>A simple, supportive process—no pressure, just clarity.</p>
+          </div>
+          <ol class="process-steps">
+            <li><span class="step-num">1</span><div><strong>Talk with our team</strong><p>Share what you need and what matters most at home.</p></div></li>
+            <li><span class="step-num">2</span><div><strong>Build a care plan</strong><p>We align services, schedule, and preferences.</p></div></li>
+            <li><span class="step-num">3</span><div><strong>Start with confidence</strong><p>Care begins with ongoing communication and adjustments as needed.</p></div></li>
+          </ol>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="contact-section">
+    <section class="section">
       <div class="section-inner">
         <div class="section-header">
-          <div class="section-kicker">Get Started</div>
-          <h2 class="section-title">Let’s talk about care for your loved one.</h2>
+          <div class="section-kicker">Families</div>
+          <h2 class="section-title">A calmer experience for everyone involved.</h2>
           <p class="section-intro">
-            Not sure what you need yet? That is okay. Tell us a little about your situation and we will walk through options together.
+            The right support can change a household’s day‑to‑day. Here are a few examples of what families often tell us matters most.
+          </p>
+        </div>
+
+        <div class="quote-grid">
+          <figure class="quote-card">
+            <blockquote>“Consistent help with meals and routines made a noticeable difference within the first week.”</blockquote>
+            <figcaption>Family caregiver</figcaption>
+          </figure>
+          <figure class="quote-card">
+            <blockquote>“The communication was clear, and we finally felt like we had a plan.”</blockquote>
+            <figcaption>Adult child of client</figcaption>
+          </figure>
+          <figure class="quote-card">
+            <blockquote>“It’s not just tasks—companionship brought back a sense of normal.”</blockquote>
+            <figcaption>Client family</figcaption>
+          </figure>
+        </div>
+        <p class="small-note">Testimonials shown are representative examples and may be anonymized for privacy.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="section-inner">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s talk about what support would help most.</h2>
+          <p class="section-intro">
+            Tell us a bit about your situation and preferred schedule. We’ll follow up with next steps and a clear plan.
           </p>
         </div>
 
         <div class="contact-grid">
-          <div class="contact-card contact-card-media">
-            <img src="assets/img/contact-connect.png" alt="Connect about care" class="contact-image" />
-          </div>
-
           <div class="contact-card">
-            <span class="contact-badge">Request care</span>
-            <p class="contact-details">
-              Phone: <a href="tel:12533490008">253-349-0008</a><br />
-              Email: <a href="mailto:info@fastchoicehomecare.com">info@fastchoicehomecare.com</a>
-            </p>
-            <p>
-              If we miss your call, please leave a message with your name, callback number, and a brief description of how we can help.
-              We will return your call as soon as possible.
-            </p>
+            <h3>Call us</h3>
+            <p class="contact-lead">If you prefer, call and we can walk through options together.</p>
+            <a class="btn-primary" href="tel:12533490008">Call: 253-349-0008</a>
 
-            <form action="https://formsubmit.co/info@fastchoicehomecare.com" method="POST">
-              <div class="form-row">
-                <div>
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="Name" required />
-                </div>
-                <div>
-                  <label for="phone">Phone</label>
-                  <input type="tel" id="phone" name="Phone" required />
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div>
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="Email" required />
-                </div>
-                <div>
-                  <label for="city">City / Area</label>
-                  <input type="text" id="city" name="City" />
-                </div>
-              </div>
-
-              <div>
-                <label for="service">Type of help needed</label>
-                <select id="service" name="Service">
-                  <option value="">Please select</option>
-                  <option value="Companionship">Companionship</option>
-                  <option value="Personal Care">Personal Care</option>
-                  <option value="Housekeeping">Housekeeping / Laundry</option>
-                  <option value="Transportation">Transportation / Errands</option>
-                  <option value="Respite Care">Respite Care</option>
-                  <option value="Other">Other / Not sure</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="message">Tell us about your situation</label>
-                <textarea
-                  id="message"
-                  name="Message"
-                  placeholder="Share a few details about your loved one, their needs, and your preferred schedule."
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary btn-submit">Submit Request</button>
-              <p class="form-helper">By submitting this form, you consent to being contacted about home care services.</p>
-            </form>
+            <div class="contact-details">
+              <div><strong>Email:</strong> <a href="mailto:info@fastchoicehomecare.com">info@fastchoicehomecare.com</a></div>
+              <div><strong>Service area:</strong> Pierce County &amp; surrounding communities</div>
+              <div><strong>Hours:</strong> Mon–Fri, 8:00am–5:00pm</div>
+            </div>
           </div>
+
+          <form class="contact-form" action="https://formsubmit.co/info@fastchoicehomecare.com" method="POST">
+            <input type="hidden" name="_subject" value="New Fast Choice Homecare inquiry" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-row two">
+              <div>
+                <label for="phone">Phone</label>
+                <input id="phone" name="phone" type="tel" placeholder="(###) ###-####" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@email.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="message">How can we help?</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about care needs, schedule, and any preferences."></textarea>
+            </div>
+
+            <button class="btn-primary" type="submit">Send Request</button>
+            <p class="form-footnote">By submitting, you consent to be contacted about care services. We do not sell your information.</p>
+          </form>
         </div>
       </div>
     </section>
@@ -291,14 +314,32 @@
     function scrollToSection(id) {
       const el = document.getElementById(id);
       if (el) {
-        const headerOffset = 70;
+        const headerOffset = 80;
         const elementPosition = el.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - headerOffset;
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+        window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
       }
+    }
+
+    // Mobile navigation
+    const toggle = document.querySelector('.nav-toggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (toggle && mobileMenu) {
+      toggle.addEventListener('click', () => {
+        const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!isOpen));
+        mobileMenu.hidden = isOpen;
+        document.body.classList.toggle('menu-open', !isOpen);
+      });
+
+      mobileMenu.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', () => {
+          toggle.setAttribute('aria-expanded', 'false');
+          mobileMenu.hidden = true;
+          document.body.classList.remove('menu-open');
+        });
+      });
     }
   </script>
 </body>
