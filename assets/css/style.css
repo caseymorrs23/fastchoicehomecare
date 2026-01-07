@@ -1362,3 +1362,39 @@ body.menu-open .nav-mobile{ display:flex; }
 @media (max-width: 820px){
   .logo-img{ height: 54px; }
 }
+
+
+/* ---- Contact form final polish (single-column stacked) ---- */
+.contact-form--stacked {
+  display: grid;
+  grid-template-columns: 1fr !important;
+  gap: 14px;
+}
+
+.contact-form--stacked label {
+  display: block;
+  font-weight: 700;
+  margin: 0 0 6px 2px;
+}
+
+.contact-form--stacked input,
+.contact-form--stacked textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form--stacked textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Ensure button spans full width on all screens */
+.contact-form--stacked button,
+.contact-form--stacked .btn,
+.contact-form--stacked input[type="submit"] {
+  width: 100%;
+}
+
+/* If the page has a fixed header, ensure anchors don't hide under it */
+:root { --sticky-header-offset: 88px; }
+section[id] { scroll-margin-top: var(--sticky-header-offset); }
