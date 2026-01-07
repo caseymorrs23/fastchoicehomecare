@@ -1362,3 +1362,60 @@ body.menu-open .nav-mobile{ display:flex; }
 @media (max-width: 820px){
   .logo-img{ height: 54px; }
 }
+
+
+/* --- Sticky / Fixed Header Enhancements (2026-01) --- */
+:root{
+  --header-offset: 104px;
+}
+
+/* Ensure header is always visible while scrolling */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Prevent content from hiding under the fixed header */
+body{
+  padding-top: var(--header-offset);
+}
+
+.header-actions{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex: 0 0 auto;
+}
+
+/* Make logo more visible */
+.logo-img{
+  height: 90px;
+}
+
+/* Keep header CTAs visible on desktop + mobile */
+.nav-cta,
+.nav-quote{
+  display: inline-flex;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px){
+  :root{ --header-offset: 96px; }
+  .logo-img{ height: 74px; }
+  .header-actions .btn-primary,
+  .header-actions .btn-outline{
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Ensure mobile dropdown appears beneath fixed header */
+.nav-mobile{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
