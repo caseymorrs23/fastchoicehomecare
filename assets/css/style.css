@@ -1988,3 +1988,12 @@ body{ padding-top: 122px; }
 @media (max-width: 900px){
   .contact-logo img{ height: 120px; }
 }
+/* =========================
+   v14 Brand name + header logo
+   ========================= */
+.logo-img{ height: 110px !important; width: auto !important; }
+.header-actions .btn{ padding: 12px 18px !important; }
+.btn-call{ min-width: 190px; }
+@media (max-width: 820px){
+  .logo-img{ height: 90px !important; }
+}
