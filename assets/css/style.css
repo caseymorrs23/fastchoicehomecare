@@ -1398,3 +1398,85 @@ body.menu-open .nav-mobile{ display:flex; }
 /* If the page has a fixed header, ensure anchors don't hide under it */
 :root { --sticky-header-offset: 88px; }
 section[id] { scroll-margin-top: var(--sticky-header-offset); }
+
+
+/* ---- Header logo visibility ---- */
+header img,
+.navbar img,
+.site-header img {
+  max-height: 78px !important;
+  width: auto;
+}
+@media (max-width: 768px) {
+  header img,
+  .navbar img,
+  .site-header img {
+    max-height: 64px !important;
+  }
+}
+
+
+/* ---- Contact form final layout polish ---- */
+.contact-form--stacked {
+  max-width: 520px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contact-form--stacked label {
+  font-weight: 700;
+}
+
+.contact-form--stacked input,
+.contact-form--stacked textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.contact-form--stacked textarea {
+  min-height: 150px;
+}
+
+.contact-form--stacked button {
+  margin-top: 8px;
+  height: 48px;
+  font-size: 16px;
+}
+
+/* ---- Fixed header CTA: Free Consultation + Call button ---- */
+.header-cta{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-right:12px;
+}
+.header-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:13px;
+  background: rgba(40, 52, 111, 0.10);
+  border: 1px solid rgba(40, 52, 111, 0.18);
+  white-space:nowrap;
+}
+.header-call{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 14px;
+  border-radius:999px;
+  font-weight:800;
+  text-decoration:none;
+  white-space:nowrap;
+  border: 1px solid rgba(40, 52, 111, 0.25);
+}
+@media (max-width: 768px){
+  .header-cta{gap:8px; margin-right:8px;}
+  .header-badge{display:none;}
+  .header-call{padding:10px 12px; font-size:14px;}
+}
