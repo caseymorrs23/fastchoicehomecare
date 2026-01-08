@@ -1894,7 +1894,7 @@ body{ padding-top: 122px; }
 .hero-banner::before{
   content: "";
   display:block;
-  height: 520px;
+  height: 380px;
   border-radius: 26px;
   background-image:
     linear-gradient(90deg, rgba(17,24,39,0.64) 0%, rgba(17,24,39,0.34) 46%, rgba(17,24,39,0.08) 70%, rgba(17,24,39,0.00) 100%),
@@ -1906,8 +1906,8 @@ body{ padding-top: 122px; }
 }
 .hero-content{
   position: relative;
-  margin-top: -520px;
-  height: 520px;
+  margin-top: -380px;
+  height: 380px;
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -1959,12 +1959,32 @@ body{ padding-top: 122px; }
 }
 
 @media (max-width: 820px){
-  .hero-banner::before{ height: 560px; }
+  .hero-banner::before{ height: 440px; }
   .hero-content{
-    margin-top: -560px;
-    height: 560px;
+    margin-top: -440px;
+    height: 440px;
     max-width: 100%;
     padding: 22px 18px;
   }
   .hero--banner .hero-trust{ gap: 8px; }
+}
+/* Contact logo fill */
+.contact-logo{
+  margin-top: 18px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 18px 10px 6px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.55);
+  border: 1px solid rgba(17,24,39,0.08);
+}
+.contact-logo img{
+  height: 140px;
+  width: auto;
+  max-width: 100%;
+  opacity: 0.92;
+}
+@media (max-width: 900px){
+  .contact-logo img{ height: 120px; }
 }
