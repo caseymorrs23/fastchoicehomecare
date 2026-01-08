@@ -14,70 +14,62 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-  <header>
-<div class="nav-wrapper">
-      <a href="#home" class="logo" aria-label="Fast Choice Homecare">
-        <img src="assets/img/logo-main.png" alt="Fast Choice Homecare logo" class="logo-img" />
-      </a>
+  <header class="site-header" role="banner">
+  <div class="nav-wrapper">
+    <a class="brand" href="#home" aria-label="FastChoice Home Care">
+      <img class="logo-img" src="assets/img/logo-main.png" alt="FastChoice Home Care logo" />
+    </a>
 
-      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-        <span></span><span></span><span></span>
-      </button>
-
-      <nav class="nav-desktop" aria-label="Primary navigation">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions" aria-label="Header actions">
-        <span class="header-badge">Free Consultation</span>
-        <a class="btn-outline btn-call" href="tel:2533490008">Call 253-349-0008</a>
-        <a class="btn-primary btn-quote" href="#contact">Get a Quote</a>
-      </div>
-
-</div>
-
-    <div id="mobileMenu" class="nav-mobile" hidden>
+    <nav class="nav-links" aria-label="Primary">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
-      <a class="btn-primary nav-mobile-cta" href="#contact">Get a Quote</a>
-      <a class="btn-outline nav-mobile-call" href="tel:2533490008">Call 253-349-0008</a>
+    </nav>
+
+    <div class="header-actions" aria-label="Header actions">
+      <span class="header-badge">Free Consultation</span>
+      <a class="btn btn-outline btn-call" href="tel:2533490008">Call 253-349-0008</a>
+      <a class="btn btn-primary btn-quote" href="#contact">Get a Quote</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">☰</button>
     </div>
-  </header>
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu" hidden>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <div class="mobile-cta">
+      <a class="btn btn-primary" href="#contact">Get a Quote</a>
+      <a class="btn btn-outline" href="tel:2533490008">Call 253-349-0008</a>
+    </div>
+  </div>
+</header>
 <section id="home" class="hero">
-  <div class="hero-inner">
+  <div class="hero-container">
     <div class="hero-copy">
-      <h1>Compassionate In-Home Care You Can Trust</h1>
-      <p class="hero-sub"></p>
+      <h1>Compassionate In‑Home Care You Can Trust</h1>
+      <p class="hero-sub">
+        Based in Kent (King County). Serving clients across King County, plus Pierce &amp; Snohomish Counties.
+      </p>
       <div class="hero-cta">
-        <a class="btn-primary" href="#contact">Get a Quote</a>
-        <a class="btn-outline" href="tel:2533490008">Call 253-349-0008</a>
+        <a class="btn btn-primary" href="#contact">Request a Free Consultation</a>
+        <a class="btn btn-outline" href="tel:2533490008">Call 253‑349‑0008</a>
       </div>
       <div class="hero-trust" aria-label="Trust signals">
-        <div class="trust-item">
-          <span class="trust-icon">✓</span>
-          <div><strong>Locally</strong><br><span>Owned &amp; Operated</span></div>
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">✓</span>
-          <div><strong>Screened</strong><br><span>&amp; Trained Caregivers</span></div>
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon">✓</span>
-          <div><strong>Serving</strong><br><span>King, Pierce &amp; Snohomish</span></div>
-        </div>
+        <div class="trust-item"><span class="trust-dot"></span><strong>Locally owned</strong><span>and responsive</span></div>
+        <div class="trust-item"><span class="trust-dot"></span><strong>Screened caregivers</strong><span>trained &amp; supported</span></div>
+        <div class="trust-item"><span class="trust-dot"></span><strong>Flexible schedules</strong><span>care that fits your life</span></div>
       </div>
     </div>
-    <div class="hero-media" aria-hidden="true">
-      <img src="assets/img/hero-caregiver.webp" alt="Caregiver providing friendly in-home care" loading="eager" />
+
+    <div class="hero-media">
+      <img src="assets/img/hero-caregiver.webp" alt="Caregiver providing friendly in-home care" loading="eager">
     </div>
   </div>
 </section>
+
 
 
   
@@ -276,35 +268,36 @@
           </div>
         </div>
 
-        <form class="contact-form" class="contact-form contact-form--stacked" action="https://formsubmit.co/info@fastchoicehomecare.com" method="POST">
-          <input type="hidden" name="_subject" value="New Fast Choice Homecare inquiry" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_captcha" value="false" />
+        <form class="contact-form" action="https://formsubmit.co/info@fastchoicehomecare.com" method="POST">
+      <input type="hidden" name="_subject" value="New Home Care Inquiry (FastChoice Home Care)">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
 
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" name="name" required type="text" placeholder="Your full name" required />
-          </div>
+      <div class="form-grid">
+        <div class="field">
+          <label for="fc-name">Name</label>
+          <input id="fc-name" name="name" type="text" placeholder="Your full name" required>
+        </div>
 
-          <div class="form-row two">
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" required pattern="[0-9\-\(\)\s]+" type="tel" placeholder="(###) ###-####" required />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" required type="email" type="email" placeholder="you@email.com" required />
-            </div>
-          </div>
+        <div class="field">
+          <label for="fc-phone">Phone</label>
+          <input id="fc-phone" name="phone" type="tel" placeholder="(###) ###‑####" required>
+        </div>
 
-          <div class="form-row">
-            <label for="message">How can we help?</label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about care needs, schedule, and any preferences."></textarea>
-          </div>
+        <div class="field">
+          <label for="fc-email">Email</label>
+          <input id="fc-email" name="email" type="email" placeholder="you@email.com" required>
+        </div>
 
-          <button class="btn-primary" type="submit">Send</button>
-          <p class="form-footnote">We do not sell your information.</p>
-        </form>
+        <div class="field field-wide">
+          <label for="fc-message">How can we help?</label>
+          <textarea id="fc-message" name="message" placeholder="Tell us about care needs, schedule, and any preferences." required></textarea>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Send</button>
+      <p class="form-note">We do not sell your information.</p>
+    </form>
       </div>
     </div>
   </section>
@@ -366,5 +359,32 @@
       });
     }
   </script>
+<script>
+(function(){
+  const header = document.querySelector('.site-header');
+  const btn = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('mobileMenu');
+
+  const onScroll = () => {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 8);
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if (btn && menu){
+    btn.addEventListener('click', () => {
+      const isOpen = !menu.hasAttribute('hidden');
+      if (isOpen){
+        menu.setAttribute('hidden','');
+        btn.setAttribute('aria-expanded','false');
+      } else {
+        menu.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+  }
+})();
+</script>
 </body>
 </html>
