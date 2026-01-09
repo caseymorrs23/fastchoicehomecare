@@ -1695,8 +1695,8 @@ header.is-scrolled{
   --max: 1160px;
   --ink: #111827;
   --muted: rgba(17,24,39,0.72);
-  --brand: #29356f;
-  --accent: #f59a1b;
+  --brand: #0c1863;
+  --accent: #706040;
 }
 .site-header{
   position: fixed; top:0; left:0; right:0;
@@ -1989,11 +1989,23 @@ body{ padding-top: 122px; }
   .contact-logo img{ height: 120px; }
 }
 /* =========================
-   v14 Brand name + header logo
+   v16 Brand palette alignment
    ========================= */
-.logo-img{ height: 110px !important; width: auto !important; }
-.header-actions .btn{ padding: 12px 18px !important; }
-.btn-call{ min-width: 190px; }
-@media (max-width: 820px){
-  .logo-img{ height: 90px !important; }
+:root{
+  --brand: #0c1863;
+  --brand-soft: #102080;
+  --accent: #706040;
 }
+.logo-img{ height: 110px !important; width:auto !important; }
+@media (max-width: 820px){ .logo-img{ height: 90px !important; } }
+
+.btn-primary{ background: var(--brand) !important; }
+.btn-outline{
+  color: var(--brand) !important;
+  border-color: rgba(41,53,111,0.24) !important;
+}
+.header-badge{
+  background: rgba(245,154,27,0.16) !important;
+  border-color: rgba(245,154,27,0.28) !important;
+}
+.trust-dot{ background: var(--accent) !important; }
